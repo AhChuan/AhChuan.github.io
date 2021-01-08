@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="./assets/css/profile.css" rel="stylesheet">
+    <title>MoneyTracker</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #39b54e;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html" aria-current="page">
+                <img src="./assets/images/logo.png" alt="" width="30" height="30" class="d-inline-block align-top">
+                MoneyTracker
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav" mr-auto>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./dashboard.html">Dashboard</a>
+                    </li>
+                </ul>
+                <div class="ml-auto custom-control custom-switch">
+                    <input class="custom-control-input" type="checkbox" id="nightModeSwitch">
+                    <label class="custom-control-label" style="color: #fff;" for="nightModeSwitch">Night Mode</label>
+                </div>
+                <ul class="navbar-nav" ml-auto mb-2>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="./assets/images/user.png" alt="" width="30" height="30"
+                                class="d-inline-block align-top">
+                            <span id="profile">username</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="./profile.html">Profile</a>
+                            <a class="dropdown-item" onclick="logout();">Log out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container fullscreen">
+        <div class="row fullscreen">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <div class="middle-content form-group wrap-form">
+                    <h3 class="text-center">Profile</h3>
+                    <div class="row mt-3 mb-3">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="tbUsername" disabled type="text">
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                    <div class="row mt-3 mb-3">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <p class="text-right">
+                                <a class="linkAction ml-auto" onclick="changePassword()">Change Password</a>
+                            </p>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                    <div class="row mt-3 mb-3">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="tbPassword" type="password" placeholder="New Password">
+                            <div class="required-msg">
+                                New password is required
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                    <div class="row mt-3 mb-3">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <button type="submit" class="btn btn-block btn-success" id="btnSave">SAVE</button>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+
+                    <div class="row mt-3 mb-3" id="msgContainer">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <div class="alert alert-danger" role="alert" id="msg">
+                                A simple warning alert—check it out!
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/profile.js"></script>
+</body>
+
+</html>

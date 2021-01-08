@@ -1,0 +1,40 @@
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ebebeb;
+}
+
+.middle-content {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.wrap-form {
+    background-color: #fff;
+    border-radius: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+.dark-mode {
+    background-color: #232931;
+    color: #eeeeee;
+}
+
+.dark-mode-wrap-form {
+    background-color: #666666;
+}
+
+.dark-mode-divider {
+    background-color: #eee;
+}
+
+.dark-mode-table {
+    color: #eee;
+}
+
+.dark-mode-form-control {
+    background-color: #8f8f8f !important;
+    border: none !important;
+    color: #eee !important;
+}
