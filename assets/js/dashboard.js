@@ -253,7 +253,8 @@ function populateSpendingChart(groupedtransactions, isThisMonth, isDarkTheme) {
             labels: {
                 fontColor: "#000"
             }
-        }
+        },
+        maintainAspectRatio: false
     }
     if (isDarkTheme) {
         spendingChartOptions = {
@@ -261,7 +262,8 @@ function populateSpendingChart(groupedtransactions, isThisMonth, isDarkTheme) {
                 labels: {
                     fontColor: "#eee"
                 }
-            }
+            },
+            maintainAspectRatio: false
         }
     }
 
